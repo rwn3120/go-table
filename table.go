@@ -113,7 +113,7 @@ func (t *Table) row(columns ...string) error {
 
 func (t *Table) Header(columns ...string) error {
     if t.numberRows {
-        columns = append([]string{""}, columns...)
+        columns = append([]string{"#"}, columns...)
     }
     return t.row(columns...)
 }
